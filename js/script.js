@@ -48,7 +48,7 @@ createApp({
         },
 
         autoplay() {
-            this.clock = setInterval(this.nextSlide, 1000);
+            this.clock = setInterval(this.nextSlide, 3000);
         },
 
         stopAuto(){
