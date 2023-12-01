@@ -27,6 +27,7 @@ createApp({
                     }
                 ],
             activeIndex: 0,
+            clock: 0,
         }
     }, 
     methods: {
@@ -45,5 +46,14 @@ createApp({
                 this.activeIndex = 4;
             };
         },
+
+        autoplay() {
+            this.clock = setInterval(this.nextSlide, 1000);
+        },
+
+        stopAuto(){
+            clearInterval(this.clock);
+        }
     },
 }).mount('#app');
+
